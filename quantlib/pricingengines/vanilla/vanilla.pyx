@@ -110,7 +110,7 @@ cdef class FDDividendAmericanEngine(PricingEngine):
     def __init__(self, scheme, GeneralizedBlackScholesProcess process, timesteps, gridpoints):
 
         # FIXME: first implementation using a fixed scheme!
-        print 'Warning : rough implementation using CrankNicolson schema'
+        #print 'Warning : rough implementation using CrankNicolson schema'
         cdef shared_ptr[_bsp.GeneralizedBlackScholesProcess] process_ptr = \
             shared_ptr[_bsp.GeneralizedBlackScholesProcess](
                 deref(process._thisptr)
